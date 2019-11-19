@@ -38,21 +38,26 @@
   navbarCollapse();
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
+  
+  // Modal images
+  var modal = document.getElementById("myModal");
 
- // Magnific popup calls
- $('#projects').magnificPopup({
-  delegate: 'a',
-  type: 'image',
-  tLoading: 'Loading image #%curr%...',
-  mainClass: 'mfp-img-mobile',
-  gallery: {
-    enabled: true,
-    navigateByImgClick: true,
-    preload: [0, 1]
-  },
-  image: {
-    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
   }
-});
 
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  } 
+ 
 })(jQuery); // End of use strict
