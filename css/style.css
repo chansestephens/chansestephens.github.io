@@ -69,15 +69,15 @@
 
   /* Individual Sections */
   .section-about {
-    background-color: #f8f9fa;
-  }
-
-  .section-projects {
     background-color: #fff;
   }
 
-  .section-contact {
+  .section-projects {
     background-color: #f8f9fa;
+  }
+
+  .section-contact {
+    background-color: #fff;
   }
 
   /* Color Changes */
